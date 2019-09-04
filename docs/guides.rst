@@ -137,7 +137,7 @@ A Manipulator lets you define a virtual property ``full_name`` that won't get pe
       .....
       class FullNameManipulator(Manipulator):
          def transform_outgoing(self, doc, model):
-            doc['full_name'] = "{} {}".format(user['first_name'], user['last_name'])
+            doc['full_name'] = "{} {}".format(doc['first_name'], doc['last_name'])
             return doc
 
          def transform_incoming(self, doc, model, action):
